@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Results summary component</title>
+
+  <style>
+    body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 100vh;
+      font-family: sans-serif;
+    }
+
+    .container{
+      display: flex;
+      justify-content: center;
+      width: 600px;
+      gap: 20px;
+     
+    }
+    .result{
+      width: 40%;
+      padding: 10px;
+      border-radius: 20px;
+      background:linear-gradient( hsl(252, 100%, 67%),hsl(241, 81%, 54%));
+      flex-grow: 1;
+      flex-shrink: 1;
+    
+    }
+    .result h4{
+      text-align: center;
+    }
+    .circle{
+      padding: 50px;
+      margin: auto;
+      height: 80px;
+      width: 80px;
+      border-radius: 100px;
+      box-shadow: inset 8px 70px 70px 0px  hsla(256, 72%, 46%, 1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    .big-score{
+      font-size: 60px;
+      font-weight: bold;
+      color: white;
+    }
+    .small-score{
+      font-size: 17px;
+      color: white
+    }
+    .result-text h2{
+      color: white;
+      text-align: center;
+    }
+    .result-text{
+      padding: 20px;
+      text-align: center;
+      color: white;
+    }
+
+    .summary{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      flex-grow: 1;
+      flex-shrink: 1;
+      
+  
+
+    }
+    .sum-con{
+      display: flex;
+      gap: 10px;
+    }
+   
+    .reaction{
+      width: 80%;
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      background-color: hsla(0, 100%, 67% ,0.1);
+      color: hsl(0, 100%, 67%);
+      padding: 15px;
+      margin: 10px;
+      border-radius: 10px;
+    }
+    .memory{
+      width: 80%;
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      background-color: hsla(39, 100%, 56% ,0.1);
+      color: hsl(39, 100%, 56%);
+      padding: 15px;
+      margin: 10px;
+      border-radius: 10px;
+    }
+    .verbal{
+      width: 80%;
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      background-color: hsla(166, 100%, 37%,0.1);
+      color: hsl(166, 100%, 37%);
+      padding: 15px;
+      margin: 10px;
+      border-radius: 10px;
+    }
+
+    .visual{
+      width: 80%;
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      background-color: hsla(234, 85%, 45%,0.1);
+      color: hsl(234, 85%, 45%);
+      padding: 15px;
+      margin: 10px;
+      border-radius: 10px;
+    }
+    .text{
+      color: black;
+      font-weight: bold;
+
+    }
+    .grey{
+      color: grey;
+
+    }
+    .button{
+      width: 100%;
+      margin-top: 20px;
+      padding: 20px;
+      color: white;
+      background-color: hsl(224, 30%, 27%);
+      border-radius: 30px;
+      
+;
+    }
+    button:hover{
+      background-color:hsl(241, 81%, 54%)
+    }
+
+    @media(max-width:760px){
+      .container{
+        display: flex;
+        flex-direction: column;
+      }
+      .result{
+        width: 100%;
+        border-radius: 0%;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        flex-shrink: 1;
+      }
+      .result-text{
+        text-align: center;
+        padding: 20px;
+      }
+      .summary{
+        padding: 0px;
+        width: 80%;
+        margin: 0 auto;
+      }
+
+
+    }
+
+
+
+
+
+    
+
+      
+   
+
+
+     
+  </style>
+</head>
+<body>
+<!--
+  Your Result
+  76
+  of 100
+
+  Great
+  You scored higher than 65% of the people who have taken these tests.
+  
+  Summary
+
+  Reaction
+  80 / 100
+
+  Memory
+  92 / 100
+
+  Verbal
+  61 / 100
+
+  Visual
+  72 / 100
+
+  Continue
+-->
+  <div class="container">
+    <div class="result">
+      <h4>Your result</h4>
+      <div class="circle">
+        <span class="big-score">76</span><br>
+        <span class="small-score">out of 100</span>
+      </div>
+      <div class="result-text">
+        <h2>Great</h2>
+        <p>You scored higher than 65% of the people who have taken these tests.</p>
+
+      </div>
+    </div>
+    <div class="summary">
+      <h2>summary</h2>
+      <div class="sum reaction">
+        <div class="sum-con">
+          <img src="assets\images\icon-reaction.svg" alt="reaction">
+          <span>Reaction</span>
+        </div>
+        <div class="text">
+          80<span class="grey">/100</span>
+        </div>
+      </div>
+
+      <div class="sum memory">
+        <div class="sum-con">
+          <img src="assets\images\icon-memory.svg" alt="memory">
+          <span>Memory</span>
+        </div>
+        <div class="text">
+          92<span class="grey">/100</span>
+        </div>
+      </div>
+    
+
+     <div class="sum verbal">
+       <div class="sum-con">
+        <img src="assets\images\icon-verbal.svg" alt="verbal">
+        <span>Verbal</span>
+       </div>
+       <div class="text">
+        61<span class="grey">/100</span>
+       </div>
+     </div>
+
+     <div class="sum visual">
+       <div class="sum-con">
+        <img src="assets\images\icon-visual.svg" alt="visual">
+        <span>Visual</span>
+       </div>
+       <div class="text">
+        72<span class="grey">/100</span>
+       </div>
+     </div>
+
+      <button class="button">Continue</button>
+     </div>
+    </div>
+
+
+   
+  </div>
+</body>
+</html>
